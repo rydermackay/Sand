@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         formatter.allowedUnits = .UseAll
         formatter.zeroPadsFractionDigits = true
         label.text = "\(formatter.stringFromByteCount(free)) of \(formatter.stringFromByteCount(total)) free"
-        progressView.progress = Float(free) / Float(total)
+        progressView.progress = (Float(total - free)) / Float(total)
     }
     
     @IBAction func fill(sender: UIControl?) {
