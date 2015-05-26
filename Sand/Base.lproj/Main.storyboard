@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Sand" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1sb-85-FEF">
+                                <rect key="frame" x="16" y="299" width="568" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvc-y6-gB4">
+                                <rect key="frame" x="279" y="309" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQu-Re-Vn8">
+                                <rect key="frame" x="285" y="261" width="30" height="30"/>
+                                <state key="normal" title="Fill!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fill:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rwV-7R-t0Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zvc-y6-gB4" firstAttribute="top" secondItem="1sb-85-FEF" secondAttribute="bottom" constant="8" symbolic="YES" id="5Aa-7B-hkd"/>
+                            <constraint firstItem="Zvc-y6-gB4" firstAttribute="centerX" secondItem="1sb-85-FEF" secondAttribute="centerX" id="EtG-kI-NG6"/>
+                            <constraint firstAttribute="centerX" secondItem="1sb-85-FEF" secondAttribute="centerX" id="J00-mS-HbC"/>
+                            <constraint firstAttribute="centerY" secondItem="1sb-85-FEF" secondAttribute="centerY" id="NX6-BK-WRL"/>
+                            <constraint firstItem="oQu-Re-Vn8" firstAttribute="centerX" secondItem="1sb-85-FEF" secondAttribute="centerX" id="O8p-GA-5mw"/>
+                            <constraint firstItem="1sb-85-FEF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="S5z-bV-to2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1sb-85-FEF" secondAttribute="trailing" id="tJ6-e7-YrH"/>
+                            <constraint firstItem="1sb-85-FEF" firstAttribute="top" secondItem="oQu-Re-Vn8" secondAttribute="bottom" constant="8" symbolic="YES" id="x51-Co-fPj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Zvc-y6-gB4" id="SYs-3m-Ys2"/>
+                        <outlet property="progressView" destination="1sb-85-FEF" id="P3m-J5-iIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
